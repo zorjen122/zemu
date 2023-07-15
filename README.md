@@ -2,13 +2,13 @@
 
 ------
 
-This is a minimalistic and dependency-free RISC-V 64-bit simulator, compatible with c++11 and higher.
+This is a minimalistic and **dependency-free** RISC-V 64-bit simulator, compatible with c++11 and higher.
 
 ### Setup
 
 ------
 
-Before using this simulator, please make sure you have a RISC-V64 compiler that supports program input parameters, such as `riscv64-unknown-elf-g++`.
+Before using this simulator, please make sure you have a **RISC-V64** compiler that supports program input parameters, such as `riscv64-unknown-elf-g++`.
 
 ### Building Steps
 
