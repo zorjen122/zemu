@@ -1,12 +1,18 @@
-## zvemu
+### `zemu`
+
+[TOC]
 
 This is a concise, zero-dependency RISC-V 64 simulator that supports c++11 and above.
 
-### Preparation
+### `Preparation`
+
+<hr>
 
 To use this simulator, make sure that the RISC-V64-related compilers support program input parameters, such as `riscv64-unknown-elf-g++`.
 
-### Build Instructions
+### `Build`
+
+------
 
 1. Clone the repository:
 
@@ -26,7 +32,9 @@ To use this simulator, make sure that the RISC-V64-related compilers support pro
    make
    ```
 
-### Usage
+### `Usage`
+
+------
 
 To run the simulator, pass the compiled RISC-V64 executable file as an argument, for example:
 
@@ -38,7 +46,7 @@ Alternatively, you can use CMake for compilation. For example, you can compile `
 
 ```
 clang++ --std=c++11 ./src/rvemu.cpp -o zvemu -Wall -Werror
-clang++ --std=c++11 ./test/emuproc.cpp -o --std=c++20
+clang++ --std=c++11 ./test/emuproc.cpp -o --std=c++20 -Wall -Werror
 ```
 
 Example: Compile the demo code using the RISC-V64 compiler:
@@ -59,7 +67,9 @@ The expected output:
 hello zemu
 ```
 
-**Check**:
+### `Check`
+
+------
 
 Static analysis  ( xanalyzer ):
 
@@ -75,8 +85,11 @@ clang++ --std=c++11 -O3 -Wall -Werror -fsanitize=address
 
 
 
-### TODO
+### `TODO`
+
+------
 
 - Implement JIT optimization by compiling instructions that support optimization conditions after the C++ code generates assembly code.
 - Add support for RISC-V32 to allow for porting the simulator to multiple systems.
+- Add simulator window and extended functions.
 
