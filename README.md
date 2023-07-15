@@ -1,7 +1,5 @@
 # `zemu`
 
-------
-
 This is a minimalistic and **dependency-free** RISC-V 64-bit simulator, compatible with c++11 and higher.
 
 ### Setup
