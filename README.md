@@ -1,16 +1,16 @@
-### `zemu`
+## `zemu`
 
 [TOC]
 
-This is a concise, zero-dependency RISC-V 64 simulator that supports c++11 and above.
+This is a minimalistic and dependency-free RISC-V 64-bit simulator, compatible with c++11 and higher.
 
-### `Preparation`
+### Setup
 
-<hr>
+------
 
-To use this simulator, make sure that the RISC-V64-related compilers support program input parameters, such as `riscv64-unknown-elf-g++`.
+Before using this simulator, please make sure you have a RISC-V64 compiler that supports program input parameters, such as `riscv64-unknown-elf-g++`.
 
-### `Build`
+### Building Steps
 
 ------
 
@@ -20,7 +20,7 @@ To use this simulator, make sure that the RISC-V64-related compilers support pro
    git clone https://github.com/zorjen122/zemu.git
    ```
 
-2. Navigate to the `zemu` directory:
+2. Enter the `zemu` directory:
 
    ```
    cd zemu
@@ -32,21 +32,20 @@ To use this simulator, make sure that the RISC-V64-related compilers support pro
    make
    ```
 
-### `Usage`
+### Usage
 
 ------
 
-To run the simulator, pass the compiled RISC-V64 executable file as an argument, for example:
+To run the simulator, simply pass the compiled RISC-V64 executable file as an argument, for example:
 
 ```
 ./rvemu a.out
 ```
 
-Alternatively, you can use CMake for compilation. For example, you can compile `./src/rvemu.cpp` with clang++ using `-std=c++11`, and save it as `zvemu` with `-Wall -Werror` options:
+Alternatively, you can use CMake to compile it. For instance, you can compile the file `./src/rvemu.cpp` with `clang++`, using `-std=c++11` option and save it as `zvemu`. You can also add the options `-Wall -Werror` for stricter warnings:
 
 ```
 clang++ --std=c++11 ./src/rvemu.cpp -o zvemu -Wall -Werror
-clang++ --std=c++11 ./test/emuproc.cpp -o --std=c++20 -Wall -Werror
 ```
 
 Example: Compile the demo code using the RISC-V64 compiler:
@@ -55,29 +54,29 @@ Example: Compile the demo code using the RISC-V64 compiler:
 riscv64-unknown-elf-g++ --std=c++11 ./demo.cpp -o demo -Wall -Werror
 ```
 
-Then run the simulator with the compiled executable:
+Then, run the simulator with your compiled executable:
 
 ```
 ./zvemu demo
 ```
 
-The expected output:
+Expected output:
 
 ```
 hello zemu
 ```
 
-### `Check`
+### Checking
 
 ------
 
-Static analysis  ( xanalyzer ):
+Static analysis (xanalyzer):
 
 ```
 clang++ --analyze --verbose -Xanalyzer -analyzer-output=text ./src/rvemu.cpp
 ```
 
-Dynic analysis (  address sanitizer ):
+Dynamic analysis (address sanitizer):
 
 ```
 clang++ --std=c++11 -O3 -Wall -Werror -fsanitize=address
@@ -85,11 +84,10 @@ clang++ --std=c++11 -O3 -Wall -Werror -fsanitize=address
 
 
 
-### `TODO`
+### TODO
 
 ------
 
-- Implement JIT optimization by compiling instructions that support optimization conditions after the C++ code generates assembly code.
-- Add support for RISC-V32 to allow for porting the simulator to multiple systems.
-- Add simulator window and extended functions.
-
+- Implement Just-in-Time (JIT) optimization by compiling instructions that support optimization conditions after generating assembly code in C++.
+- Add support for RISC-V32 to enable porting the simulator to multiple systems.
+- Incorporate a simulator window and extend functionalities.
