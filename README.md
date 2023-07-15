@@ -1,4 +1,4 @@
-## Zero-Dependency RISC-V 64  Simulator
+## zvemu
 
 This is a concise, zero-dependency RISC-V 64 simulator that supports c++11 and above.
 
