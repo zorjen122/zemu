@@ -2,7 +2,7 @@
 
 This is a minimalistic and **dependency-free** RISC-V64-IFMC simulator, compatible with c++11 and higher.
 
-- zh_CN [简体中文](readme/README.zh_CN.md)
+- zh_CN [简体中文](README.md)
 
 ### Setup
 
