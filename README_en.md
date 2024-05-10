@@ -1,6 +1,6 @@
 # zemu
 
-This is a minimalistic and **dependency-free** RISC-V 64-bit simulator, compatible with c++11 and higher.
+This is a minimalistic and **dependency-free** RISC-V64-IFMC simulator, compatible with c++11 and higher.
 
 ### Setup
 
