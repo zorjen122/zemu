@@ -1,5 +1,7 @@
 zemu
 这是一个简约且无依赖的 RISC-V64-IFMC 模拟解释器，兼容 C++11 及更高版本
+- Language-En [English](README_en.md)
+
 设置
 在使用该模拟器之前，请确保您拥有一个支持程序输入参数的 RISC-V64 编译器，例如 riscv64-unknown-elf-g++。
 构建步骤
