@@ -66,6 +66,8 @@ hello zemu
   clang++ --std=c++11 -O3 -Wall -Werror -fsanitize=address
   ```
 
+### 参考
+   Rvemu
 ### TODO
 
 - 通过在生成的 C++ 汇编代码中编译支持优化条件的指令，实现即时优化（JIT）。
